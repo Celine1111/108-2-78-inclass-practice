@@ -30,32 +30,99 @@ c("2020-03-31T13:40:55Z",
 
 #用list儲存
 library(lubridate)
-list(
+`小明交易1` <- list(
   ymd_hms("2020-03-31T13:40:55Z"), #date/time
   "一芳", #character
   2, #numeric
   "水果茶" #character
   ) 
+print(小明交易1)
+```
 
+```{r}
+c(
+  c("108學年第1學期","高級會計學","高等統計學"),
+  c("108學年第2學期","食在拉丁美洲")
+)
+```
+
+```{r}
+# list含兩個vectors
+`小明108學年課表A` <- list(
+  c("108-1","高級會計學","高等統計學"),
+  c("108-2","食在拉丁美洲")
+)
+print(`小明108學年課表A`)
+```
+```{r}
+# list含兩個lists
+`小明108學年課表C` <- list(
+  list(
+    c("108-1"),
+    c("高級會計學","高等統計學")
+  ),
+  list(
+  c("108-2"),
+  c("食在拉丁美洲")
+  )
+)
+print(`小明108學年課表C`)
+```
+
+
+```{r}
+
+`小明108學年課表D` <- list(
+  `上學期`=list(
+    semester=c("108-1"),
+    courses=c("高級會計學","高等統計學")
+  ),
+  
+  `下學期`=list(
+  semester=c("108-2"),
+  courses=c("食在拉丁美洲")
+  )
+)
+print(`小明108學年課表D`)
+```
+
+```{r}
+commit <- list(
+  author1= c(
+    name="Martin老師", 
+    email="mtlin@gm.ntpu.edu.tw", 
+    time="2020-03-25T07:17:40Z"),
+  
+  author2= list(
+    name="Martin老師", 
+    email="mtlin@gm.ntpu.edu.tw", 
+    time=ymd_hms("2020-03-25T07:17:40Z")),
+committer = list(
+  name="emilyluckey", 
+  email="emily007@gmail.com", 
+  time=ymd_hms("2020-03-26T08:18:40Z")
+),
+  message = "update"
+ )
+print(commit)
+```
+```{r}
+save(commit, listExample,`小明108學年課表A`, file="today,Rda")
+
+```
+```{r}
+load("today,Rda")
 ```
 
 
 
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
-```
 
-## Including Plots
 
-You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+
