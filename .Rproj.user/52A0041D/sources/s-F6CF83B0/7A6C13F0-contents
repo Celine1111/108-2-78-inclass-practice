@@ -21,6 +21,27 @@ print(listExample)
 ```
 ## R Markdown
 
+```{r}
+#用vector儲存
+c("2020-03-31T13:40:55Z",
+  "一芳",
+  "2",
+  "水果茶")
+
+#用list儲存
+library(lubridate)
+list(
+  ymd_hms("2020-03-31T13:40:55Z"), #date/time
+  "一芳", #character
+  2, #numeric
+  "水果茶" #character
+  ) 
+
+```
+
+
+
+
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:

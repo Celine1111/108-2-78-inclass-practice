@@ -1,7 +1,7 @@
 ---
-title: "0408"
+title: "2020/03/18"
 author: "Celine"
-date: "4/8/2020"
+date: "3/18/2020"
 output: html_document
 ---
 
@@ -9,38 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-##list
-
-```{r}
-
-vectorExample <- c(2, 6, 7)
-listExample <- list(2, 6, 7)
-
-print(vectorExample)
-print(listExample)
-```
 ## R Markdown
-
-```{r}
-#用vector儲存
-c("2020-03-31T13:40:55Z",
-  "一芳",
-  "2",
-  "水果茶")
-
-#用list儲存
-library(lubridate)
-list(
-  ymd_hms("2020-03-31T13:40:55Z"), #date/time
-  "一芳", #character
-  2, #numeric
-  "水果茶" #character
-  ) 
-
-```
-
-
-
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 

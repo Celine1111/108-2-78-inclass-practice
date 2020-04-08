@@ -1,43 +1,25 @@
 ---
-title: "0408"
-author: "Celine"
-date: "4/8/2020"
+title: "Celine0311"
 output: html_document
+author: "Celine"
+date: "3/11/2020"
 ---
+```{python}
+
+```
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
-##list
-
 ```{r}
 
-vectorExample <- c(2, 6, 7)
-listExample <- list(2, 6, 7)
 
-print(vectorExample)
-print(listExample)
+
 ```
+
+
+
 ## R Markdown
-
-```{r}
-#用vector儲存
-c("2020-03-31T13:40:55Z",
-  "一芳",
-  "2",
-  "水果茶")
-
-#用list儲存
-library(lubridate)
-list(
-  ymd_hms("2020-03-31T13:40:55Z"), #date/time
-  "一芳", #character
-  2, #numeric
-  "水果茶" #character
-  ) 
-
-```
 
 
 
