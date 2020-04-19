@@ -1,0 +1,171 @@
+---
+title: "0331 review"
+author: "Celine"
+date: "4/19/2020"
+output: html_document
+---
+
+```{r}
+library(lubridate)
+`小明交易1` <- list(
+  ymd_hms("2020-03-31T13:40:55Z"),
+  "一芳",
+  2,
+  "水果茶"
+)
+
+print(`小明交易1`)
+```
+```{r}
+library(lubridate)
+`小明交易1` <- list(
+  ymd_hms("2020-03-31T13:40:55Z"), # Date/Time class
+  "一芳", # character
+  2, # numeric
+  "水果茶" # character
+)
+print(`小明交易1`)
+```
+```{r}
+`小明課表` <- list(
+  list(
+    c("108-1"),
+    c("高級會計學", "高等統計學")
+  ),
+  list(
+    c("108-2"),
+    c("食在拉丁美洲")
+  )
+)
+print(`小明課表`)
+```
+
+```{r}
+`小明課表` <- list(
+  `上學期`=list(
+    semester=c("108-1"),
+    courses=c("高級會計學", "高等統計學")
+  ),
+  `下學期`=list(
+    semester=c("108-2"),
+    courses=c("食在拉丁美洲")
+  )
+)
+print(`小明課表`)
+```
+```{r}
+
+commit <- list(
+  author = list(
+    name="Martin老師",
+    email="mtlin@gm.ntpu.edu.tw",
+    time=ymd_hms("2020-03-25T07:17:40Z")
+  ),
+  commiter= list(
+    name="emilyluckey",
+    email="emily007@gmail.com",
+    time=ymd_hms("2020-03-26T08:18:40Z")
+  ),
+  message = "update"
+)
+
+print(commit)
+```
+```{r}
+library(jsonlite)
+toJSON(commit)
+```
+```{r}
+
+course1_1081 <-list(
+  name="個體經濟學",
+  teacher="Alice",
+  grade=85
+)
+
+course2_1081 <- list(
+  name="總體經濟學",
+  teacher="Mark",
+  grade=73
+  
+)
+
+course1_1082 <- list(
+  name="作業研究",
+  teacher="Jason",
+  grade=90
+)
+
+`1081修課紀錄`<-
+  list(
+    course1_1081,
+    course2_1081
+  )
+`1082修課紀錄`<-
+  list(
+    course1_1082
+  )
+
+`整學期修課紀錄`<-list(
+  `108-1`=`1081修課紀錄`,
+  `108-2`=`1082修課紀錄`
+)
+
+`小明的修課紀錄`<-list(
+  name="小明",
+  record="每學期修課紀錄"
+)
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
